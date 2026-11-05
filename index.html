@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en" style="scroll-behavior: smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>GSAP SLIDER</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        list-style-type: none;
+      }
+
+      body {
+        font-family: "DM Sans", sans-serif;
+        background: #e9e9df;
+        color: #263b2e;
+      }
+
+      h1,
+      .editorial {
+        font-family: "Playfair Display", serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="overflow-hidden mx-auto bg-[#e9e9df]">
+      <div>
+        <div
+          class="min-h-screen flex flex-col justify-center items-center bg-[#e9e9df] px-6 relative"
+        >
+          <h1
+            class="text-7xl md:text-9xl text-center text-[#263b2e] uppercase tracking-tight leading-[0.95]"
+          >
+            Nature
+            <span class="block italic font-normal text-[#82917a]">
+              Unfolded.
+            </span>
+          </h1>
+
+          <p
+            class="text-sm md:text-base text-[#7b8175] mt-10 tracking-wide text-center"
+          >
+            A journey through India's beautiful wilderness.
+          </p>
+
+          <div class="absolute bottom-12 flex flex-col items-center gap-3">
+            <span class="text-[10px] uppercase text-[#879080]">
+              Scroll to explore
+            </span>
+            <div class="w-px h-12 bg-[#a6ad9d]"></div>
+          </div>
+        </div>
+
+        <section
+          class="main-section min-h-screen relative overflow-hidden bg-[#e9e9df]"
+        >
+          <div
+            class="absolute top-10 left-8 md:left-16 z-[60] flex items-center gap-3"
+          >
+            <span class="w-8 h-px bg-[#899783]"></span>
+            <span class="uppercase text-[10px] md:text-xs text-[#899783]">
+              Places worth discovering
+            </span>
+          </div>
+
+          <div class="cards">
+            <div
+              class="card card-one absolute left-1/4 top-1/2 w-80 md:w-[380px] h-[450px] md:h-[500px] z-50 flex justify-center items-center"
+            >
+              <img
+                class="object-cover w-full h-full rounded-[28px] border-[8px] border-[#f8f7f0] shadow-[0_25px_70px_rgba(38,59,46,0.18)]"
+                alt="valley of flowers"
+                src="valley.jfif"
+                data-n="1"
+              />
+            </div>
+
+            <div
+              class="card card-two absolute left-1/4 top-1/2 w-80 md:w-[380px] h-[450px] md:h-[500px] z-40 flex justify-center items-center"
+            >
+              <img
+                class="object-cover w-full h-full rounded-[28px] border-[8px] border-[#f8f7f0] shadow-[0_25px_70px_rgba(38,59,46,0.18)]"
+                alt="spiti"
+                src="spiti.jfif"
+                data-n="2"
+              />
+            </div>
+
+            <div
+              class="card card-three absolute left-1/4 top-1/2 w-80 md:w-[380px] h-[450px] md:h-[500px] z-30 flex justify-center items-center"
+            >
+              <img
+                class="object-cover w-full h-full rounded-[28px] border-[8px] border-[#f8f7f0] shadow-[0_25px_70px_rgba(38,59,46,0.18)]"
+                alt="jim Corbett"
+                src="jimc.jfif"
+                data-n="3"
+              />
+            </div>
+
+            <div
+              class="card card-four absolute left-1/4 top-1/2 w-80 md:w-[380px] h-[450px] md:h-[500px] z-20 flex justify-center items-center"
+            >
+              <img
+                class="object-cover w-full h-full rounded-[28px] border-[8px] border-[#f8f7f0] shadow-[0_25px_70px_rgba(38,59,46,0.18)]"
+                alt="Dawki"
+                src="dawki.jfif"
+                data-n="4"
+              />
+            </div>
+          </div>
+
+          <div class="texts">
+            <div
+              class="text controller-one absolute right-[6%] top-1/2 w-[500px] max-w-[45vw]"
+            >
+              <span
+                class="uppercase tracking-wide text-xs text-[#879580] block mb-5"
+              >
+                01 / Uttarakhand, India
+              </span>
+
+              <h1
+                class="text-5xl md:text-6xl uppercase mb-6 text-[#263b2e] leading-[1.1]"
+              >
+                Valley of
+                <span class="block italic font-normal">Flowers.</span>
+              </h1>
+
+              <div class="w-16 h-px bg-[#a2ad98] mb-6"></div>
+
+              <p class="text-lg md:text-xl leading-[1.9] text-[#70796e]">
+                A breathtaking Himalayan valley filled with thousands of
+                colorful wildflowers, surrounded by towering snow-covered peaks.
+                During monsoon, the landscape transforms into a vibrant natural
+                paradise. Its peaceful atmosphere, rare plant species, and
+                scenic trekking trails make it one of India's most enchanting
+                wilderness destinations.
+              </p>
+            </div>
+
+            <div
+              class="text controller-two absolute right-[6%] top-1/2 w-[500px] max-w-[45vw]"
+            >
+              <span
+                class="uppercase tracking-wide text-xs text-[#879580] block mb-5"
+              >
+                02 / Himachal Pradesh, India
+              </span>
+
+              <h1
+                class="text-5xl md:text-6xl uppercase mb-6 text-[#263b2e] leading-[1.1]"
+              >
+                Spiti
+                <span class="block italic font-normal">Valley.</span>
+              </h1>
+
+              <div class="w-16 h-px bg-[#a2ad98] mb-6"></div>
+
+              <p class="text-lg md:text-xl leading-[1.9] text-[#70796e]">
+                Hidden among the mighty Himalayas, Spiti Valley is a dramatic
+                landscape of rugged mountains, winding rivers, ancient
+                monasteries, and peaceful villages. Its vast open skies and
+                untouched terrain create an almost otherworldly atmosphere,
+                making it a dream destination for explorers, photographers, and
+                adventure lovers.
+              </p>
+            </div>
+
+            <div
+              class="text controller-three absolute right-[6%] top-1/2 w-[500px] max-w-[45vw]"
+            >
+              <span
+                class="uppercase tracking-wide text-xs text-[#879580] block mb-5"
+              >
+                03 / Uttarakhand, India
+              </span>
+
+              <h1
+                class="text-5xl md:text-6xl uppercase mb-6 text-[#263b2e] leading-[1.1]"
+              >
+                Jim Corbett
+                <span class="block italic font-normal">National Park.</span>
+              </h1>
+
+              <div class="w-16 h-px bg-[#a2ad98] mb-6"></div>
+
+              <p class="text-lg md:text-xl leading-[1.9] text-[#70796e]">
+                Known for its rich biodiversity and beautiful forest landscapes,
+                Jim Corbett is one of India's most famous wildlife destinations.
+                Dense forests, flowing rivers, grasslands, and diverse animal
+                species make it an incredible escape into nature. Visitors can
+                experience thrilling safaris and explore its remarkable
+                wilderness.
+              </p>
+            </div>
+
+            <div
+              class="text controller-four absolute right-[6%] top-1/2 w-[500px] max-w-[45vw]"
+            >
+              <span
+                class="uppercase tracking-wide text-xs text-[#879580] block mb-5"
+              >
+                04 / Meghalaya, India
+              </span>
+
+              <h1
+                class="text-5xl md:text-6xl uppercase mb-6 text-[#263b2e] leading-[1.1]"
+              >
+                Dawki
+                <span class="block italic font-normal">River Escape.</span>
+              </h1>
+
+              <div class="w-16 h-px bg-[#a2ad98] mb-6"></div>
+
+              <p class="text-lg md:text-xl leading-[1.9] text-[#70796e]">
+                Famous for its incredibly clear Umngot River, Dawki offers a
+                surreal natural experience surrounded by lush green hills. Boats
+                appear to float effortlessly above the riverbed because of its
+                transparent water. Its peaceful surroundings, breathtaking
+                scenery, and refreshing atmosphere make it a truly magical
+                destination.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div
+          class="min-h-screen flex flex-col justify-center items-center bg-[#263b2e] relative px-6"
+        >
+          <h1
+            class="text-7xl md:text-9xl text-center uppercase text-[#e9e9df] leading-[1.1]"
+          >
+            Thank
+            <span class="block italic font-normal text-[#a6b29e]"> You. </span>
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      const cards = gsap.utils.toArray(".card");
+      const texts = gsap.utils.toArray(".text");
+
+      gsap.set(cards, {
+        xPercent: -50,
+        yPercent: -50,
+        x: -700,
+        y: -800,
+        rotate: -35,
+        scale: 0.8,
+        opacity: 0,
+      });
+
+      gsap.set(texts, { yPercent: -50, y: 60, opacity: 0 });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".main-section",
+          start: "top top",
+          end: "+=400%",
+          scrub: 1,
+          pin: true,
+        },
+      });
+
+      cards.forEach((card, i) => {
+        const t = i * 2;
+        const isLast = i === cards.length - 1;
+
+        tl.to(
+          card,
+          {
+            x: 0,
+            y: 0,
+            rotate: 0,
+            scale: 1,
+            opacity: 1,
+            duration: 1,
+            ease: "power2.out",
+          },
+          t,
+        ).to(
+          texts[i],
+          { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" },
+          t + 0.4,
+        );
+
+        if (!isLast) {
+          tl.to(
+            texts[i],
+            { y: -60, opacity: 0, duration: 0.4, ease: "power1.in" },
+            t + 1.4,
+          ).to(
+            card,
+            {
+              x: -300,
+              y: 800,
+              rotate: 25,
+              scale: 0.9,
+              opacity: 0,
+              duration: 0.9,
+              ease: "power2.in",
+            },
+            t + 1.2,
+          );
+        }
+      });
+
+      tl.to({}, { duration: 0.5 });
+    </script>
+  </body>
+</html>
